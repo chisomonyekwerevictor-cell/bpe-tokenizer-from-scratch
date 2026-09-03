@@ -11,9 +11,9 @@ with open("Data.text.py", "r", encoding="utf-8") as file:
     corpus_text = file.read()
 
 
-# --------------------------------------------------
-# 1. Convert each line into byte tokens
-# --------------------------------------------------
+
+### Convert each line into byte tokens
+
 
 byte_sequences = []
 
@@ -33,9 +33,9 @@ print("First byte sequence:")
 print(byte_sequences[0])
 
 
-# --------------------------------------------------
-# 2. Build vocabulary
-# --------------------------------------------------
+
+#### Build vocabulary
+
 
 vocab = {}
 
@@ -47,9 +47,8 @@ for tokens in byte_sequences:
         vocab[tokens] += 1
 
 
-# --------------------------------------------------
-# 3. Count adjacent pairs
-# --------------------------------------------------
+
+#### Count adjacent pairs
 
 def get_pair_counts(vocab):
 
